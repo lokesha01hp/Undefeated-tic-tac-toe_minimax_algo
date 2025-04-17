@@ -25,19 +25,33 @@ This one comes loaded with:
 
 ---
 
-## 🧠 How Minimax algorithm works
+## 🧠 How the Minimax Algorithm works
 
-The **Minimax algorithm** is a decision rule used for minimizing the possible loss in a worst-case scenario and maximizing the win during the best-case. 
+This AI doesn't play — it *calculates*. The `SmartComputerPlayer` uses the **Minimax algorithm**, making it unbeatable.
 
-### How it works:
-- The AI simulates every possible move.
-- It assumes **you’re trying to win** (so it plans accordingly).
-- It then chooses the move that **minimizes your chance to win** and **maximizes its own**.
+### 🌀 What Minimax Does:
+1. **Recursively simulate** all valid moves.
+2. Assign a score to each final game state.
+3. **Backtrack and choose** the move that leads to the best score.
 
-It doesn't just react.  
-It **strategizes**.  
-And unless you play *perfectly*, you **will not win**.
+### ⚙️ Tiny Optimization:
+- If it's the first move of the game (all squares empty), AI skips thinking and picks randomly — because all options are equal.
 
+---
+
+### 🌀 Visualizing the AI’s Thought Process
+
+Here’s how the Smart AI thinks after **6 moves (i.e., 3 by each player)**:
+![Flowchart](https://github.com/user-attachments/assets/c98054b4-e409-4392-be3c-ae51ee3817e6)
+
+
+
+- Each branch represents a possible move the AI could make.
+- The leaves of the tree (bottom nodes) show the **outcome scores**:
+  - `+1` if AI wins
+  - `-1` if AI loses
+  - `0` if it’s a draw
+- The AI **backtracks from the bottom**, selecting the move that **guarantees the best possible outcome**, even against a perfect opponent.
 ---
 
 ## 🏆 Efficiency: AI Performance Results
@@ -51,11 +65,11 @@ X wins: 0
 O wins: 0
 Ties: 1000
 ```
-🧠 The AI plays so perfectly, neither side can win. Pure strategy equilibrium. You can’t beat it — you can only **tie**.
+The AI plays so perfectly, neither side can win. Pure strategy equilibrium. You can’t beat it — you can only **tie**.
 
 ---
 
-### 🧠 SmartAI vs RandomBot (1000 games)
+### 🤖 SmartAI vs RandomBot (1000 games)
 ```
 X (SmartAI) wins: 960
 O (RandomBot) wins: 0
