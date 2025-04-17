@@ -111,50 +111,49 @@ def play(game,x_player,o_player, print_game=True):
 
 if __name__ == "__main__":
     print("🎮 Welcome to the Ultimate Tic Tac Toe Showdown! 🧠")
-    
-    # print("1️⃣  Human vs Human ")
-    # print("2️⃣  Human vs Smart AI (Warning: Brainpower required)")
-    # print("3️⃣  Human vs Random Bot (Expect chaos)")
-    # choice = input("Choose your battleground :")
+    print("1️⃣  Human vs Human ")
+    print("2️⃣  Human vs Smart AI (Warning: Brainpower required)")
+    print("3️⃣  Human vs Random Bot (Expect chaos)")
+    choice = input("Choose your battleground :")
 
-    # if choice == "1":
-    #     x_player = HumanPlayer('X')
-    #     o_player = HumanPlayer('O')
-    #     t = Tic_Tac_Tae()
-    #     result= play(t,x_player,o_player,print_game=True)
+    if choice == "1":
+        x_player = HumanPlayer('X')
+        o_player = HumanPlayer('O')
+        t = Tic_Tac_Tae()
+        result= play(t,x_player,o_player,print_game=True)
     
-    # elif choice == "2":
-    #     x_player = HumanPlayer('X')
-    #     o_player = SmartComputerPlayer('O')
-    #     t = Tic_Tac_Tae()
-    #     result= play(t,x_player,o_player,print_game=True)
+    elif choice == "2":
+        x_player = HumanPlayer('X')
+        o_player = SmartComputerPlayer('O')
+        t = Tic_Tac_Tae()
+        result= play(t,x_player,o_player,print_game=True)
     
-    # elif choice == "3":
-    #     x_player = HumanPlayer('X')
-    #     o_player = RandomComputerPlayer('O')
-    #     t = Tic_Tac_Tae()
-    #     result= play(t,x_player,o_player,print_game=True)
+    elif choice == "3":
+        x_player = HumanPlayer('X')
+        o_player = RandomComputerPlayer('O')
+        t = Tic_Tac_Tae()
+        result= play(t,x_player,o_player,print_game=True)
 
-    # else:
-    #     print("Invalid choice. Please enter 1, 2, or 3.")
+    else:
+        print("Invalid choice. Please enter 1, 2, or 3.")
     
 
 
 
 # To check the efficency of SmartComputerPlayer
-    x_wins = 0
-    o_wins = 0
-    tie = 0
-    for _ in range(1000):
-        x_player = SmartComputerPlayer('X')
-        o_player = RandomComputerPlayer('O')
-        t = Tic_Tac_Tae()
-        result= play(t,x_player,o_player,print_game=False)
-        if result == 'X':
-            x_wins += 1
-        elif result == 'O':
-            o_wins += 1
-        else:
-            tie += 1
+    # x_wins = 0
+    # o_wins = 0
+    # tie = 0
+    # for _ in range(1000):
+    #     x_player = SmartComputerPlayer('X')
+    #     o_player = RandomComputerPlayer('O')
+    #     t = Tic_Tac_Tae()
+    #     result= play(t,x_player,o_player,print_game=False)
+    #     if result == 'X':
+    #         x_wins += 1
+    #     elif result == 'O':
+    #         o_wins += 1
+    #     else:
+    #         tie += 1
 
-    print(f' x wins {x_wins} times and o wins {o_wins} times and the tie happened were {tie} times')
+    # print(f' x wins {x_wins} times and o wins {o_wins} times and the tie happened were {tie} times')
